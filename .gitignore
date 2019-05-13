@@ -1,2 +1,4 @@
 
 .idea/
+src/android/.gradle
+src/android/.settings
