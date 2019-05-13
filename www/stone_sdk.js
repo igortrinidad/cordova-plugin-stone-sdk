@@ -8,8 +8,8 @@ module.exports = {
   deviceSelected: function (arrayList, successCallback, errorCallback) {
     cordova.exec(successCallback, errorCallback, "StoneSDK", "deviceSelected", [arrayList]);
   },
-  transaction: function (amount, method, instalments, success_message, successCallback, errorCallback) {
-    cordova.exec(successCallback, errorCallback, "StoneSDK", "transaction", [amount, method, instalments, success_message]);
+  transaction: function (amount, method, instalments, success_message, your_unique_id, successCallback, errorCallback) {
+    cordova.exec(successCallback, errorCallback, "StoneSDK", "transaction", [amount, method, instalments, success_message, your_unique_id]);
   },
   transactionCancel: function (transactionCode, successCallback, errorCallback) {
     cordova.exec(successCallback, errorCallback, "StoneSDK", "transactionCancel", [transactionCode]);
@@ -19,5 +19,8 @@ module.exports = {
   },
   validation: function (stoneCodeList, successCallback, errorCallback) {
     cordova.exec(successCallback, errorCallback, "StoneSDK", "validation", [stoneCodeList]);
+  },
+  displayMessage: function (deviceName, deviceMacAddress, messageToDisplay, successCallback, errorCallback) {
+    cordova.exec(successCallback, errorCallback, "StoneSDK", "displayMessage", [deviceName, deviceMacAddress, messageToDisplay]);
   },
 };

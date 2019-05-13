@@ -2,11 +2,12 @@ repositories {
     jcenter()
     google()
     maven { url "https://packagecloud.io/stone/sdk-android/maven2" }
+    maven { url "https://packagecloud.io/stone/sdk-android-snapshot/maven2" }
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:27.1.1'
-    compile 'br.com.stone:stone-sdk:2.5.9'
+    implementation "com.android.support:appcompat-v7:23.0.1"
+    implementation "br.com.stone:stone-sdk:3.0.4"
 }
 
 android {
